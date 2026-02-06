@@ -19,6 +19,12 @@
     "symfony/framework-bundle": "^6.4|^7.0",
     "symfony/console": "^6.4|^7.0"
   },
+  "scripts": {
+    "app:ensure-quality": [
+      "./vendor/bin/phpstan analyse --memory-limit=-1",
+      "./vendor/bin/rector --dry-run"
+    ]
+  },
   "require-dev": {
     "rector/rector": "^2.3",
     "phpstan/phpstan": "^2.1"
